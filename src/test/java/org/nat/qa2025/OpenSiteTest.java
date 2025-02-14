@@ -1,2 +1,5 @@
-package org.nat.qa2025;public class OpenSiteTest {
+package org.nat.qa2025;
+
+public class OpenSiteTest {
+
 }
