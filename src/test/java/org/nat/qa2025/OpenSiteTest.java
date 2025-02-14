@@ -21,6 +21,7 @@ public class OpenSiteTest {
 @AfterMethod
     public void tearDown(){
     driver.quit();
+    //driver.close();
 }
 
 }
