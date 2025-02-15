@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
+import java.util.List;
 
 public class FindElementTests {
     WebDriver driver;
@@ -22,13 +22,21 @@ public class FindElementTests {
         driver.manage().window().maximize();
         //timeout
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
     }
 
     @Test
     public void findElementTest() {
         WebElement element = driver.findElement(By.tagName("h1"));
         System.out.println(element.getText());
+        List<WebElement> elements = driver.findElements(By.tagName("a"));
+        System.out.println(elements.size());
+
+        driver.findElement(By.id("city"));
+        driver.findElement(By.className("input-label"));
+        driver.findElement(By.name("viewport"));
+        driver.findElement(By.linkText("Let the car work"));
+        driver.findElement(By.partialLinkText("work"));
+
     }
 
     @AfterMethod
