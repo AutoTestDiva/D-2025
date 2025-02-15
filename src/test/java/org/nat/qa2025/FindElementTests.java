@@ -56,7 +56,7 @@ public class FindElementTests {
         driver.findElement(By.xpath("//label[@class='input-label']"));
         //text -> xpath //*[contains(.,'Type your data and hit Yalla!')]
         driver.findElement(By.xpath("//h2[contains(.,'Type your data and hit Yalla!')]"));
-
+    //  //*[starts-with(@class,'sub')]
     }
 
 
