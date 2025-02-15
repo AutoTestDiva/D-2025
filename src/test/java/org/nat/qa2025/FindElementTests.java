@@ -42,6 +42,8 @@ public class FindElementTests {
         driver.findElement(By.cssSelector("h1"));
         driver.findElement(By.cssSelector("#city"));
         driver.findElement(By.cssSelector(".input-label"));
+        driver.findElement(By.cssSelector("[name='viewport']"));
+        driver.findElement(By.cssSelector("[class*='pristine']"));
     }
 
     @AfterMethod
