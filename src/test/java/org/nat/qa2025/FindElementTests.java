@@ -44,7 +44,20 @@ public class FindElementTests {
         driver.findElement(By.cssSelector(".input-label"));
         driver.findElement(By.cssSelector("[name='viewport']"));
         driver.findElement(By.cssSelector("[class*='pristine']"));
+        //^-start
+        driver.findElement(By.cssSelector("[class^='ng']"));
+        //end on $
+        driver.findElement(By.cssSelector("[class$='input']"));
     }
+    @Test
+    public void findElementByXpathTest(){
+        driver.findElement(By.xpath("//h1"));
+        driver.findElement(By.xpath("//input[@id='city']"));
+        driver.findElement(By.xpath("//label[@class='input-label']"));
+        //text -> xpath //*[contains(.,'Type your data and hit Yalla!')]
+        driver.findElement(By.xpath("//h2[contains(.,'Type your data and hit Yalla!')]"));
+    }
+
 
     @AfterMethod
     public void tearDown() {
