@@ -36,7 +36,12 @@ public class FindElementTests {
         driver.findElement(By.name("viewport"));
         driver.findElement(By.linkText("Let the car work"));
         driver.findElement(By.partialLinkText("work"));
-
+    }
+    @Test
+    public void findElementByCssTest(){
+        driver.findElement(By.cssSelector("h1"));
+        driver.findElement(By.cssSelector("#city"));
+        driver.findElement(By.cssSelector(".input-label"));
     }
 
     @AfterMethod
